@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Threading.Tasks;
 using CoreLocation;
-using Foundation;
 using UIKit;
+using Google.Maps;
 using MapKit;
 
 namespace Samples
 {
 	public partial class ViewController : UIViewController
 	{
+
+		public const string apiKey = "<<Your API Key>>";
+
 		protected ViewController(IntPtr handle) : base(handle)
 		{
 		}
@@ -47,7 +50,6 @@ namespace Samples
 
 			BtnMinus.TouchUpInside += (sender, e) =>
 			{
-
 				MKCoordinateSpan span;
 				span.LatitudeDelta = MyMapView.Region.Span.LatitudeDelta * 2f;
 				span.LongitudeDelta = MyMapView.Region.Span.LongitudeDelta * 2f;
@@ -67,13 +69,21 @@ namespace Samples
 			var Longitude = Convert.ToDouble(TxtLongitude.Text);
 
 			var location = new CLLocation(Latitude, Longitude);
-			var geoCoder = new CLGeocoder();
-			var placemarks = await geoCoder.ReverseGeocodeLocationAsync(location);
+			//var geoCoder = new CLGeocoder();
 
-			foreach (var placemark in placemarks)
+			//var placemarks = await geoCoder.ReverseGeocodeLocationAsync(location);
+
+			//foreach (var placemark in placemarks)
+			//{
+			//	TxtAddress.Text = placemark.AddressDictionary.ToString();
+			//}
+
+			var geo = new Geocoder();
+			var coordinate = new CLLocationCoordinate2D(Latitude, Longitude);
+			geo.ReverseGeocodeCord(coordinate, (response, error) =>
 			{
-				TxtAddress.Text = placemark.AddressDictionary.ToString();
-			}
+				TxtAddress.Text = response.FirstResult.ToString();
+			});
 
 			return string.Empty;
 		}

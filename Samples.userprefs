@@ -1,8 +1,19 @@
-﻿<Properties StartupConfiguration="{F4FB754B-C241-4D28-AC07-CFFA3119F90A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Samples/ViewController.cs">
+﻿<Properties StartupConfiguration="{F4FB754B-C241-4D28-AC07-CFFA3119F90A}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RerverseGeoCodingiOS Status">
     <Files>
-      <File FileName="Samples/ViewController.cs" Line="24" Column="1" />
+      <File FileName="RerverseGeoCodingiOS Status" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Samples" expanded="True" selected="True">
+            <Node name="Samples" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

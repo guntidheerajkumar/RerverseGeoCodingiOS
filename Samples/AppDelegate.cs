@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Google.Maps;
 using UIKit;
 
 namespace Samples
@@ -9,7 +10,7 @@ namespace Samples
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-
+		public const string MapsApiKey = "<<Your API Key>>";
 		public override UIWindow Window
 		{
 			get;
@@ -20,7 +21,7 @@ namespace Samples
 		{
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
-
+			MapServices.ProvideAPIKey(MapsApiKey);
 			return true;
 		}
 

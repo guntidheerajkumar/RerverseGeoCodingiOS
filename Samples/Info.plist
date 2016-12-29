@@ -44,5 +44,10 @@
 	<string>True</string>
 	<key>NSLocationUsageDescription</key>
 	<string>True</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>googlechromes</string>
+    <string>comgooglemaps</string>
+</array>
 </dict>
 </plist>
